@@ -6,73 +6,73 @@
 S: Applied individually
 G: Applied globally
 
-admin users (S)
+*admin users (S)*
 eg: admin users = desktop
 
-browseable / browsable (S)
+*browseable / browsable (S)*
 Controls if the share is seen in the list of available shares in a net view (public or not)
 eg : browseable = yes / browsable = yes
 
-force group (S)
+*force group (S)*
 eg : force group = sudo
 
-force user (S)
+*force user (S)*
 eg : force user = Nero
 
-public / guest ok (S)
+*public / guest ok (S)*
 eg : public = no / guest ok = no
 
-hide files (S)
+*hide files (S)*
 Can hide files, but affects performance since SMB needs to check if files are asked to be hidden or not.
 eg : hide files = /home/Nero/hiddenfolder
 
-max connections (S)
+*max connections (S)*
 If max connections are greater than 0, they will be refused. 0=unlimited
 eg : max connections = 10
 
-null passwords (G)
+*null passwords (G)*
 Allow or disallow access to accounts that have null passwords
 NOTE: Needs to have a null password, refer to smbpasswd.
 eg : null passwords = yes
 
-directory / path (S)
+*directory / path (S)*
 Specifies directory where the user is given access
 eg : path = /home/Nero
 
-writeable (S)
+*writeable (S)*
 If this parameter is set to yes, then users of a service may create or modify files in the service's directory
 eg : writeable = yes
 
-read only (S)
+*read only (S)*
 An inverted synonym is writeable.
 If this parameter is set to yes, then users of a service may NOT create or modify files in the service's directory
 eg : read only = yes
 
-root / root dir / root directory (G)
+*root / root dir / root directory (G)*
 Server will chroot to the directory on startup. Not needed, but adds a extra layer of security.
 eg : root directory = /home/Nero
 
-username level (G)
+*username level (G)*
 SMB tries to guess the real Unix username, as DOS clients send usually an all uppercase username. By default, it tries all lowercase, followed by the username with the first letter capitalized, then gives up. If the parameter is non-zero, the behavior changes. The higher the number selected, the more combinations will be tried, but the search will be slower, so it is needed only when UNIX systems have case sensitive usernames.
 eg : username level = 0
 
-usershare allow guests (G)
+*usershare allow guests (G)*
 Controls whether user defined shares are allowed to be accesed by non-authenticated users. Equivalent of guest ok = yes.
 eg : usershare allow guests = no
 
-usershare max shares (G)
+*usershare max shares (G)*
 Specifies number of user defined shares that are allowed to be created by users belonging to the grup owning the usershare directory.
 eg : usershare max shares = 0
 
-valid users (S)
+*valid users (S)*
 List of users that should be allowed login. If it is empty, then any user can log in.
 eg : valid users = smbuser
 
-workgroup (G)
+*workgroup (G)*
 Controls workgroup server name when queried by clients. 
 eg : workgroup = WORKGROUP
 
-writable / write ok / writeable (S)
+*writable / write ok / writeable (S)*
 Inverted synonym for read only.
 eg : writeable = nore
 

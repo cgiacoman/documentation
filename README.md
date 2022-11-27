@@ -76,14 +76,16 @@ eg : workgroup = WORKGROUP
 Inverted synonym for read only.
 eg : writeable = nore
 
-### smbpasswd:
+### User management:
 OPTIONS
--a: Available only as root, specifies that the username following will be added to the local smbpasswd file, then prompts to type the new password. Option is ignored if the username already exists inside the file, and treated as a regular password change.
+smbpasswd -a: Available only as root, specifies that the username following will be added to the local smbpasswd file, then prompts to type the new password. Option is ignored if the username already exists inside the file, and treated as a regular password change.
 
--x: Avaliable only as root, deletes the user from the smbpasswd file.
+smbpasswd -x: Avaliable only as root, deletes the user from the smbpasswd file.
 
--d: Available only as root, this disables the user instead of deleting it.
+smbpasswd -d: Available only as root, this disables the user instead of deleting it.
 
--e: Available only as root, this enables the user, must be previously disabled.
+smbpasswd -e: Available only as root, this enables the user, must be previously disabled.
 
--n: Specifies that the user has the password set to null. The specific option must be selected on the smb.conf file (null passwords = yes) when used.
+smbpasswd -n: Specifies that the user has the password set to null. The specific option must be selected on the smb.conf file (null passwords = yes) when used.
+
+pdbedit -L -V: Lists all available users, V to be verbose.
